@@ -1,4 +1,8 @@
-const amIFat = false;
-const hello = null;
-let something;
-console.log(something, amIFat);
+function sayHello() {
+  console.log("Hello!");
+}
+
+sayHello();
+sayHello();
+sayHello();
+sayHello();
