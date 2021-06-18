@@ -1,31 +1,22 @@
-function sayHello(nameOfPerson, age) {
-  console.log(nameOfPerson);
-}
-
-sayHello("창민", 29);
-sayHello("택윤", 29);
-sayHello("상윤", 36);
-sayHello("기덕", 46);
-
 const calculator = {
   add: function (a, b) {
-    console.log(a + b);
+    return a + b;
   },
 
   minus: function (a, b) {
-    console.log(a - b);
+    return a - b;
   },
 
   gop: function (a, b) {
-    console.log(a * b);
+    return a * b;
   },
 
   divide: function (a, b) {
-    console.log(a / b);
+    return a / b;
   },
 };
 
-calculator.add(5, 1);
-calculator.minus(5, 1);
-calculator.gop(5, 1);
-calculator.divide(5, 1);
+const plusResult = calculator.add(5, 1);
+const minusResult = calculator.minus(plusResult, 1);
+const timeResult = calculator.gop(5, minusResult);
+const divideResult = calculator.divide(timeResult, plusResult);
