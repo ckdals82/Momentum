@@ -1,0 +1,7 @@
+h1 {
+  color: blue;
+}
+.active {
+  color: tomato;
+  transition: color 0.5s ease-in-out;
+}
