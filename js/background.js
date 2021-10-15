@@ -1,9 +1,23 @@
-const images = ["0.jpg", "1.jpg", "2.jpg", "3.jpg"];
+const body = document.querySelector('body');
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+const IMAGE_NUMBER = 5;
+const IMAGE_CLASS_NAME = 'bgimage';
 
-const bgImage = document.createElement("img");
+function printImage(imageNum) {
+  const image = new Image();
+  image.src = `img/${imageNum}.jpeg`;
+  image.classList.add(IMAGE_CLASS_NAME);
+  body.appendChild(image);
+}
 
-bgImage.src = `img/${chosenImage}`;
+function genRandom() {
+  const number = Math.floor(Math.random() * IMAGE_NUMBER) + 1;
+  return number;
+}
 
-document.body.appendChild(bgImage);
+function init() {
+  const randomNumber = genRandom();
+  printImage(randomNumber);
+}
+
+init();
