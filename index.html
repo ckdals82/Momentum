@@ -8,34 +8,23 @@
     <title>Momentum app</title>
   </head>
   <body>
-    <div id="background"></div>
-    <h1 id="clock">00:00:00</h1>
-    <form class="hidden" id="login-form">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 class="hidden" id="greeting"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-      <span></span>
-      <span></span>
+    <span class="js-weather"></span>
+    <div class="js-clock">
+      <h1>00:00</h1>
     </div>
+    <form class="js-form form">
+      <input type="text" placeholder="What is your name?" />
+    </form>
+    <span class="js-greettings greetings"></span>
+    <form class="js-toDoForm">
+      <input type="text" placeholder="Write a to do" />
+    </form>
+    <ul class="js-toDoList"></ul>
 
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <!-- <script src="js/background.js"></script> -->
+    <script src="js/bj.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-
-    <script type="module" src="./index.js"></script>
   </body>
 </html>

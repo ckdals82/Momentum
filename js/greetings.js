@@ -1,28 +1,46 @@
-const loginForm = document.querySelector("#login-form");
-const loginInput = document.querySelector("#login-form input");
-const greeting = document.querySelector("#greeting");
+const form = document.querySelector('.js-form'),
+  input = form.querySelector('input'),
+  greeting = document.querySelector('.js-greettings');
 
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const USER_LS = 'currentUser',
+  SHOWING_CN = 'showing';
 
-function onLoginSubmit(event) {
+function saveName(text) {
+  localStorage.setItem(USER_LS, text);
+}
+
+function handleSubmit(event) {
+  //form의 디폴트 이벤트 없애기 (엔터 누르면 submit되면서 새로고침)
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
-  const username = loginInput.value;
-  localStorage.setItem(USERNAME_KEY, username);
-  paintGreetings(username);
+
+  const currentValue = input.value;
+  saveName(currentValue);
+  paintGreeting(currentValue);
 }
 
-function paintGreetings(username) {
-  greeting.innerText = `Hello ${username}`;
-  greeting.classList.remove(HIDDEN_CLASSNAME);
+function askForName() {
+  form.classList.add(SHOWING_CN);
+  form.addEventListener('submit', handleSubmit);
 }
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-
-if (savedUsername === null) {
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", onLoginSubmit);
-} else {
-  paintGreetings(savedUsername);
+function paintGreeting(text) {
+  form.classList.remove(SHOWING_CN);
+  greeting.classList.add(SHOWING_CN);
+  greeting.innerText = `Hello ${text}`;
 }
+
+function loadName() {
+  const currentUser = localStorage.getItem(USER_LS);
+
+  if (currentUser === null) {
+    askForName();
+  } else {
+    paintGreeting(currentUser);
+  }
+}
+
+function init() {
+  loadName();
+}
+
+init();

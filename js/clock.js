@@ -1,12 +1,20 @@
-const clock = document.querySelector("#clock");
+const clockContainer = document.querySelector('.js-clock'),
+  clockTitle = clockContainer.querySelector('h1');
 
-function getClock() {
+function getTime() {
   const date = new Date();
-  const hours = String(date.getHours()).padStart(2, "0");
-  const minutes = String(date.getMinutes()).padStart(2, "0");
-  const seconds = String(date.getSeconds()).padStart(2, "0");
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+  const minutes = date.getMinutes();
+  const hours = date.getHours();
+  const seconds = date.getSeconds();
+  clockTitle.innerText = `${hours < 10 ? `0${hours}` : hours} : ${
+    minutes < 10 ? `0${minutes}` : minutes
+  } : ${seconds < 10 ? `0${seconds}` : seconds}`;
 }
-//2자리수 ,앞자리에 0을 추가함
-getClock(); //get clock을 호출하고
-setInterval(getClock, 1000); //매초마다 get clock을 다시 실행하고 있음.
+
+function init() {
+  setInterval(() => {
+    getTime();
+  }, 1000);
+}
+
+init();

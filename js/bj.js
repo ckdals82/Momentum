@@ -1,27 +1,26 @@
-const changeBackground = () => {
-  const backgroundElement = document.getElementById('background');
+const body = document.querySelector('body');
+const IMG_NUMBER = 5;
 
-  const IMG_AMOUNT = 5;
+function handleImgLoad() {
+  console.log('finished loading');
+}
 
-  const paintImage = (imageNumber) => {
-    backgroundElement.style.backgroundImage = `url(./img/bg${imageNumber}.jpeg)`;
-  };
+function paintImage(imgNumber) {
+  const image = new Image();
+  image.src = `img/bg${imgNumber + 1}.jpeg`;
+  image.classList.add('bgImage');
+  body.appendChild(image);
+  image.addEventListener('loaded', handleImgLoad);
+}
 
-  const getRandomNumber = (amount) => {
-    const randomNumber = Math.floor(Math.random() * amount + 1);
-    return randomNumber;
-  };
+function genRandom() {
+  const number = Math.floor(Math.random() * IMG_NUMBER);
+  return number;
+}
 
-  const backgroundFadeIn = () => {
-    setTimeout(() => backgroundElement.classList.add('fade-in'), 200);
-  };
+function init() {
+  const randomNumber = genRandom();
+  paintImage(randomNumber);
+}
 
-  const init = () => {
-    paintImage(getRandomNumber(IMG_AMOUNT));
-    backgroundFadeIn();
-  };
-
-  init();
-};
-
-export default changeBackground;
+init();
