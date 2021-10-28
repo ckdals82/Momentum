@@ -15,7 +15,7 @@
 - To Do list 기능 (todo.js)
 <hr>
 
-## 🎨 ScreenShot
+## 🎨 기능 구
 
 greeting.js (인사 기능)<br>
 사용자가 이름을 넣으면 입력받은 사용자 이름을 활용하여 hello 사용자 이름 출력<br>
