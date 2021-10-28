@@ -26,16 +26,13 @@ greeting.js (인사 기능)<br>
 clock.js (시계 기능)<br>
 >시계 기능구현은 현재의 시간을 계속 가져와서 업데이트 하면 된다.<br>
 >특정 클래스, 태그 html 돔으로 가져오기<br>
-
-
-getTime 시간 가져오기<br>
+>getTime 시간 가져오기<br>
 >setInterval 1000 밀리세컨(1초)에 한번씩 getTime 콜백 함수 실행(즉, 업데이트)<br>
 
 
 todo.js (todolist 기능)<br>
 >init 초기화 함수 (기본 화면 출력, submit 요청)<br>
 >greeting과 다르게 따로 받고 표시하는 과정이 다른 시간에 있을 필요는 없으므로 같은 화면에 input과 출력을 모두 표시<br>
-
 >출력은 ul 태그 안에 li를 넣어서 표현<br>
 >로컬 스토리지 사용하여 저장 삭제<br>
 <br>
