@@ -22,6 +22,7 @@ greeting.js (인사 기능)<br>
 >입력 받은 내용을 기억하고 있어야 새로고침시에도 초기화 되지 않아야 하므로 로컬 스토리지 사용<br>
 >로컬 스토리지 : 자바스크립트의 작은 정보들(데이터 set)을 Object 형태의 key와 value 묶음으로 브라우저 local storage에 저장 (새로고침 해도 그대로 남아 있음)<br>
 <br>
+
 clock.js (시계 기능)<br>
 >시계 기능구현은 현재의 시간을 계속 가져와서 업데이트 하면 된다.<br>
 >특정 클래스, 태그 html 돔으로 가져오기<br>
@@ -29,7 +30,7 @@ clock.js (시계 기능)<br>
 
 getTime 시간 가져오기<br>
 >setInterval 1000 밀리세컨(1초)에 한번씩 getTime 콜백 함수 실행(즉, 업데이트)<br>
-<br>
+
 
 todo.js (todolist 기능)<br>
 >init 초기화 함수 (기본 화면 출력, submit 요청)<br>
@@ -38,10 +39,12 @@ todo.js (todolist 기능)<br>
 >출력은 ul 태그 안에 li를 넣어서 표현<br>
 >로컬 스토리지 사용하여 저장 삭제<br>
 <br>
+
 bg.js (배경화면 랜덤화)<br>
-* *초기화 init<br>
-* *img 개수 지정, dom으로 가져오기<br>
+>초기화 init<br>
+>img 개수 지정, dom으로 가져오기<br>
 <br>
+
 getRandom 함수 (랜덤 숫자 뽑기 함수)<br>
 >내장함수 Math 활용<br>
 >random 0.0000000000 ~ 1.00000000000 사이의 숫자를 random하게 내보냄 (자리수는 정확하지 않음)<br>
