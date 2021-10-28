@@ -1,13 +1,22 @@
-# Momentum
-바닐라🍦JS를 이용한 웹앱<br>
-JS기본 문법과 이해<br>
 
-기능 :<br>
-사용자 이름 입력시 인사(greeting.js)<br>
-시계 기능 (clock.js)<br>
-배경 화면 변화 (bg.js)<br>
-To Do list 기능 (todo.js)<br>
-<br>
+
+##  Momentum
+바닐라🍦JS를 이용한 웹앱
+- Go to result https://ckdals82.github.io/Momentum/
+
+<hr>
+
+## ⚙ 기능
+
+- 새로고침 데이터 유지
+- 사용자 이름 입력시 인사(greeting.js)
+- 시계 기능 (clock.js)
+- 배경 화면 변화 (bg.js)
+- To Do list 기능 (todo.js)
+<hr>
+
+## 🎨 ScreenShot
+
 greeting.js (인사 기능)<br>
 사용자가 이름을 넣으면 입력받은 사용자 이름을 활용하여 hello 사용자 이름 출력<br>
 입력 받은 내용을 기억하고 있어야 새로고침시에도 초기화 되지 않아야 하므로 로컬 스토리지 사용<br>
